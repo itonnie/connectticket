@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-toolbar>
+      <ion-title>ticket ID: {{item.id}}</ion-title>
+      <ion-buttons start>
+        <button ion-button icon-only color="royal" (click)="closeModal()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card>    
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{item.thumbnailUrl}}">
+        </ion-avatar>
+        <h2>Connect Ticket</h2>
+        <p>Date: Tuesday 2nd, October 2017</p>
+      </ion-item>       
+          <img src="{{item.url}}">      
+          <ion-card-content>
+            <p>{{item.title}}</p>
+          </ion-card-content>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="info"></ion-icon>
+                <div>More Info</div>
+              </button>
+            </ion-col>
+            <ion-col center text-center>
+              <ion-note>
+                departs in: {{item.id}} hours
+              </ion-note>
+            </ion-col>
+          </ion-row>  
+     </ion-card>
+
+     <ion-fab bottom right>
+       <button ion-fab (click)="showToast(item.id)">
+         <ion-icon name="add"></ion-icon>
+       </button>
+     </ion-fab>
+</ion-content>
